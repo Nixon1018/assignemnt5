@@ -1,5 +1,4 @@
 package org.example;
-import sun.font.TrueTypeFont;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,14 +15,8 @@ class Point implements Cloneable{
     }
     boolean check(double x,double y)
     {
-        if( this.x==x && this.y==y)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return ( this.x==x && this.y==y)?true:false;
+
     }
     public Object clone() throws CloneNotSupportedException
     {
@@ -36,20 +29,20 @@ public class Main {
     private static final  Logger LOGGER=Logger.getLogger("InfoLogging");
     public static void main(String[] args) throws CloneNotSupportedException {
 
-        Scanner Sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         double p1;
         double p2;
         boolean res;
         LOGGER.info("Enter the first x coordinate:");
-        p1=Sc.nextDouble();
+        p1=sc.nextDouble();
         LOGGER.info("Enter the first y coordinate:");
-        p2=Sc.nextDouble();
+        p2=sc.nextDouble();
         Point pi = new Point(p1,p2);
         Point pj = (Point)pi.clone();
         LOGGER.info("Enter the Second x coordinate:");
-        pj.x=Sc.nextDouble();
+        pj.x=sc.nextDouble();
         LOGGER.info("Enter the Second y coordinate:");
-        pj.y=Sc.nextDouble();
+        pj.y=sc.nextDouble();
         res= pi.check(pj.x,pj.y);
         String s= "Result:"+res;
         LOGGER.info(s);
