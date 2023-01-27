@@ -12,9 +12,9 @@ class Point implements Cloneable{
         x=p1;
         y=p2;
     }
-    boolean check(double x,double y)
+    String check(double x,double y)
     {
-        return ( this.x==x && this.y==y)?true:false;
+        return ( this.x==x && this.y==y)?"true":"false";
 
     }
     public Object clone() throws CloneNotSupportedException
@@ -31,7 +31,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         double p1;
         double p2;
-        boolean res;
+        String res;
         LOGGER.info("Enter the first x coordinate:");
         p1=sc.nextDouble();
         LOGGER.info("Enter the first y coordinate:");
