@@ -33,7 +33,6 @@ public class Main {
         double p1;
         double p2;
         String res;
-        try{
         LOGGER.info("Enter the first x coordinate:");
         p1 = sc.nextDouble();
         LOGGER.info("Enter the first y coordinate:");
@@ -47,11 +46,5 @@ public class Main {
         res = pi.check(pj.x, pj.y);
         String s = "Result:" + res;
         LOGGER.info(s);
-    }catch (Exception e)
-        {
-            String ec = ""+e;
-            LOGGER.info(ec);
-            sc.nextLine();
-        }
-}
+    }
 }
