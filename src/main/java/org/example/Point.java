@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.logging.Logger;
 
-class Point{
+public class Point{
     private static final Logger LOGGER=Logger.getLogger("InfoLogging");
     double x;
     double y;
